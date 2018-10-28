@@ -33,11 +33,11 @@ public class BookApp extends JFrame implements ActionListener {
 	
 	Font font= new Font("MonoSpaced", Font.BOLD, 12);
 	
-	JLabel titleLabel = new JLabel("Tytuł : ");
-	JLabel autorLabel = new JLabel("Autor : ");
-	JLabel dataLabel  = new JLabel("Rok Wydania : ");
-	JLabel liczbaStronLabel = new JLabel("Liczba stron : ");
-	JLabel bookTypeLabel = new JLabel("Typ Książki : ");
+	JLabel titleLabel = 	 	new JLabel("       Tytuł : ");
+	JLabel autorLabel =			new JLabel("       Autor : ");
+	JLabel dataLabel  =			new JLabel(" Rok Wydania : ");
+	JLabel liczbaStronLabel = 	new JLabel("Liczba stron : ");
+	JLabel bookTypeLabel = 		new JLabel(" Typ Książki : ");
 	
 	JTextField titleField = new JTextField(12);
 	JTextField autorField = new JTextField(12);
@@ -138,7 +138,7 @@ public class BookApp extends JFrame implements ActionListener {
 		Object eventSource = ev.getSource();
 		
 		try {
-			if(eventSource == newButton) book = BookDialog.createNewBook();
+			if(eventSource == newButton) book = BookDialog.createNewBook(this);
 			
 			if(eventSource == deleteButton) 
 				book = null;
